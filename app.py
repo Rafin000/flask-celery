@@ -1,5 +1,6 @@
 # from celery import Celery
 
+from celery import Celery
 from project import create_app , ext_celery
 
 app = create_app()
