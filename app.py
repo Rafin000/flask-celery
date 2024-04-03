@@ -1,10 +1,11 @@
 # from celery import Celery
+import eventlet 
+eventlet.monkey_patch()
 
 from project import create_app , ext_celery, socketio
 
 app = create_app()
 
-celery = ext_celery.celery
 # celery = Celery(
 #     __name__,  
 #     broker = "redis://127.0.0.1:6379/0",
